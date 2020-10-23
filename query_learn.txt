@@ -1,0 +1,1 @@
+select * from dbc.tables where tablename='SRC_CMS_LIS_HIST_DTL'

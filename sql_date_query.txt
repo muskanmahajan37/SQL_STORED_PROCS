@@ -1,0 +1,24 @@
+
+=====================================================
+select name,if (select date from table_name )='yyyy-mm-dd'
+                begin 
+                      insert into table_name value(name,input_date)
+               end
+         else
+               begin
+                     print 'invalid format'
+                     insert into table value(name,8888-12-8)   
+               end
+===================================================================
+                                             OR
+===================================================================
+
+select name,if (select date from table_name )='yyyy-mm-dd'
+                          begin
+                                   select input_date from table
+                          end
+                     else
+                          begin  
+                             print 'invalid format'
+                              insert into table_name values(name,8888-12-8)
+                         end
